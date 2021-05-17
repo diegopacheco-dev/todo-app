@@ -10,39 +10,49 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header>
-    <h1 class="title">TODO</h1>
-    <div>
-      <button class="toggle-theme" ><img src="./images/icon-moon.svg" alt=""></button>
-    </div>
-  </header>
+  <!---------------- TITULO ------------------------->
+  <div class="header__container">
+    <header>
+      <h1 class="title">TODO</h1>
+      <div>
+        <button class="toggle-theme" ><img src="./images/icon-moon.svg" alt=""></button>
+      </div>
+    </header>
+  </div>
 
-  <main>
-    <form class="form-group b-radius">
-      <p class="icon-circle"></p><input type="text" class="input-task" placeholder="Create a new todo">
+
+  <main class="container">
+    
+    <!---------------- INGRESAR TAREA ---------------->
+    <form class="form-group b-radius" id="form-input-task">
+      <span class="icon-circle"></span><input type="text" id="input-task" class="input-task" placeholder="Create a new todo">
     </form>
 
-    <div class="todo__list b-radius">
-      <ul>
-        <li class="item"><p class="icon-circle"></p>task1</li>
-        <li class="item"><p class="icon-circle"></p>task2</li>
-        <li class="item"><p class="icon-circle"></p>task3</li>
-        <li class="item"><p class="icon-circle"></p>task4</li>
-        <li class="item"><p class="icon-circle"></p>task5</li>
+    
+    <!-------------- LISTA DE TAREAS -------------->
+    <div class="todo-list__container b-radius">
+      <ul id="todo-list">
+        <li class="item"><span class="icon-circle check" id="complete"></span>task1<span class="icon-cross" id="delete"></span></li>
+        <li class="item"><span class="icon-circle"></span>task5</li>
       </ul>
       <div class="item todo__options">
         <p class="task__count">items left</p>
+        <ul class="filter__list desktop item b-radius">
+          <li>All</li>
+          <li>Active</li>
+          <li>Completed</li>
+        </ul>
         <p class="task__delete">Clear Completed</p>
       </div>
     </div>
 
-    <nav class="todo__nav">
-      <ul class="todo__menu">
+
+    <!--------------- FILTRAR TAREAS --------------->
+      <ul class="filter__list mobile item b-radius">
         <li>All</li>
         <li>Active</li>
         <li>Completed</li>
       </ul>
-    </nav>
 
   </main>
   <p class="Instruccions"></p>
@@ -53,5 +63,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="./main.js"></script>
 </body>
 </html>
