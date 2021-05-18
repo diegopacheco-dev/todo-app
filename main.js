@@ -9,12 +9,7 @@ const completeTask = (id) => {
     paintTasks();
 } 
 
-const deleteTask = (id) => {
-    console.log(id);
-    tasks.filter(task => task.id !== id? task : '');
-    console.log(tasks);
 
-}
 
 const paintTasks = () => {
     todoList.innerHTML="";
